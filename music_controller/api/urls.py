@@ -1,10 +1,10 @@
 
 from django.urls import path
-from .views import main
+from .views import RoomView,RoomCreate
 
 urlpatterns = [
 
-    path("home",main),
-    path("",main),
+    path("createroom",RoomCreate.as_view()),
+    path("",RoomView.as_view()),
 
 ]
